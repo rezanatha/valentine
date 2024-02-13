@@ -29,8 +29,8 @@ body {
 }
 
 #main-image {
-    width: 60%;
-    height: auto; 
+    width: auto;
+    height: 60%; 
 }
 
 .title-image-container{
