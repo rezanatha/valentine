@@ -4,8 +4,13 @@ const yesBtn = document.querySelector('.yes-btn');
 const noBtn = document.querySelector('.no-btn');
 const wrapperRect = wrapper.getBoundingClientRect();
 const noBtnRect = noBtn.getBoundingClientRect();
+
+var text = "I love you, my little fluffy cat 😘🥰😍🩵🩵🩵";
+const emojis = ["💗","🧡","🥹","🥰","😘","🫶","❤️","🤍","🐈"]
+
 yesBtn.addEventListener('click', () => {
-    question.innerHTML = "I love you, my little fluffy cat 😘🥰😍🩵🩵🩵💗";
+    question.innerHTML = text;
+    text += emojis[Math.floor(Math.random() * emojis.length)];
 });
 noBtn.addEventListener('click', () => {
     question.innerHTML = "Are you sure?";
