@@ -1,5 +1,6 @@
 const wrapper = document.querySelector('.wrapper');
 const question = document.querySelector('.question');
+const titleImage = document.querySelectorAll('.title-image-div');
 const yesBtn = document.querySelector('.yes-btn');
 const noBtn = document.querySelector('.no-btn');
 const wrapperRect = wrapper.getBoundingClientRect();
@@ -10,6 +11,11 @@ const emojis = ["💗","🧡","🥹","🥰","😘","🫶","❤️","🤍","🐈"
 
 yesBtn.addEventListener('click', () => {
     question.innerHTML = text;
+
+    titleImage.forEach(i => {
+        i.innerHTML = "<img src='./img/happy_cat.gif' class='title-image'>";
+    });
+
     text += emojis[Math.floor(Math.random() * emojis.length)];
 });
 noBtn.addEventListener('click', () => {
